@@ -21,12 +21,12 @@ namespace Singleton
         public static SingletonDatabase Instance => _instance.Value;
     }
 
-    static class Program
-    {
-        static void Main(string[] args)
-        {
-            var db = SingletonDatabase.Instance;
-            var pop = db.GetPopulation("Moscow");
-        }
-    }
+    //static class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        var db = SingletonDatabase.Instance;
+    //        var pop = db.GetPopulation("Moscow");
+    //    }
+    //}
 }
