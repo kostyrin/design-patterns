@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "Singleton\Sing
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.csproj", "{3A86D5E0-12B7-4AF9-9B0C-11E94E720163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{C24EEE45-BC46-4A89-8355-1322BF7B78E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "Bridge\Bridge.csproj", "{C24EEE45-BC46-4A89-8355-1322BF7B78E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite.NeuronNetwork", "Composite.NeuronNetwork\Composite.NeuronNetwork.csproj", "{96D21638-B5D4-4B25-BF90-1ECFAAAC2417}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{C24EEE45-BC46-4A89-8355-1322BF7B78E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C24EEE45-BC46-4A89-8355-1322BF7B78E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C24EEE45-BC46-4A89-8355-1322BF7B78E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D21638-B5D4-4B25-BF90-1ECFAAAC2417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D21638-B5D4-4B25-BF90-1ECFAAAC2417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D21638-B5D4-4B25-BF90-1ECFAAAC2417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D21638-B5D4-4B25-BF90-1ECFAAAC2417}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
