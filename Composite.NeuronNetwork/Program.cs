@@ -45,16 +45,21 @@ namespace Composite.NeuronNetwork
     {
         static void Main(string[] args)
         {
-            var neuron1 = new Neuron();
-            var neuron2 = new Neuron();
+            //var neuron1 = new Neuron();
+            //var neuron2 = new Neuron();
 
-            neuron1.ConnectTo(neuron2);
+            //neuron1.ConnectTo(neuron2);
 
-            var layer1 = new NeuronLayer();
-            var layer2 = new NeuronLayer();
+            //var layer1 = new NeuronLayer();
+            //var layer2 = new NeuronLayer();
 
-            neuron1.ConnectTo(layer1);
-            layer1.ConnectTo(layer2);
+            //neuron1.ConnectTo(layer1);
+            //layer1.ConnectTo(layer2);
+
+            var values = new List<IValueContainer> { new SingleValue { Value = 1 }, new SingleValue { Value = 2 } };
+            values.Add(new ManyValues { 1, 2 } ) ;
+            var sum = values.Sum();
+
         }
     }
 }
