@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "Bridge\Bridge.csproj", "{C24EEE45-BC46-4A89-8355-1322BF7B78E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite.NeuronNetwork", "Composite.NeuronNetwork\Composite.NeuronNetwork.csproj", "{96D21638-B5D4-4B25-BF90-1ECFAAAC2417}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "Composite.NeuronNetwork\Composite.csproj", "{96D21638-B5D4-4B25-BF90-1ECFAAAC2417}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
