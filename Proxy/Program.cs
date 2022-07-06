@@ -19,6 +19,9 @@ namespace Proxy
             {
                 item.X++;
             }
+
+            var proxy = new CompositeProxyWithArrayBacked();
+            proxy.All = true;
         }
     }
 }
