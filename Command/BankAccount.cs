@@ -17,13 +17,15 @@ namespace Command
             Console.WriteLine($"Deposited {amount}. balance in now {balance}");
         }
 
-        public void Withdraw(int amount)
+        public bool Withdraw(int amount)
         {
             if (balance - amount >= overdraftLimit)
             {
                 balance -= amount;
                 Console.WriteLine($"Withdrew {amount}. balance in now {balance}");
+                return true;
             }
+            return false;
         }
 
         public override string ToString()

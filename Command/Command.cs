@@ -13,6 +13,7 @@ namespace Command
     public interface ICommand
     {
         void Call();
+        void Undo();
     }
 
     public class BankAccountCommand : ICommand
@@ -20,6 +21,7 @@ namespace Command
         private readonly BankAccount bankAccount;
         private Action action;
         private int amount;
+        private bool succeeded;
 
         public BankAccountCommand(BankAccount bankAccount, Action action, int amount)
         {
@@ -34,14 +36,30 @@ namespace Command
             {
                 case Action.Deposit:
                     bankAccount.Deposit(amount);
+                    succeeded = true;
                     break;
                 case Action.Withdraw:
-                    bankAccount.Withdraw(amount);
+                    succeeded = bankAccount.Withdraw(amount);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(action));
             }
                 
+        }
+
+        public void Undo()
+        {
+            switch (action)
+            {
+                case Action.Deposit:
+                    bankAccount.Withdraw(amount);
+                    break;
+                case Action.Withdraw:
+                    bankAccount.Deposit(amount);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(action));
+            }
         }
     }
 }

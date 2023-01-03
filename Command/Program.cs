@@ -8,6 +8,8 @@ Console.WriteLine(ba);
 foreach (var command in commands)
     command.Call();
 Console.WriteLine(ba);
-
+foreach (var command in Enumerable.Reverse(commands))
+    command.Undo();
+Console.WriteLine(ba);
 // See https://aka.ms/new-console-template for more information
 Console.ReadLine();
