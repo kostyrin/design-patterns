@@ -14,5 +14,15 @@ namespace MethodChain
             modificator.Handle();
             Assert.Equal(3, car.Value);
         }
+
+        [Fact]
+        public void Test()
+        {
+            var game = new Game();
+            var goblin = new Goblin(game);
+            game.Creatures.Add(goblin);
+            Assert.Equal(1, goblin.Attack);
+            Assert.Equal(1, goblin.Defense);
+        }
     }
 }

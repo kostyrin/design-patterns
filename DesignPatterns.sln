@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodChain", "MethodChain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerChain", "BrokerChain\BrokerChain.csproj", "{67B35FA1-D75A-4A9E-A133-FDAAC57CD435}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command", "Command\Command.csproj", "{F341D598-BC4D-4B30-9202-586D2E6AE4EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{67B35FA1-D75A-4A9E-A133-FDAAC57CD435}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B35FA1-D75A-4A9E-A133-FDAAC57CD435}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B35FA1-D75A-4A9E-A133-FDAAC57CD435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F341D598-BC4D-4B30-9202-586D2E6AE4EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F341D598-BC4D-4B30-9202-586D2E6AE4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F341D598-BC4D-4B30-9202-586D2E6AE4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F341D598-BC4D-4B30-9202-586D2E6AE4EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
