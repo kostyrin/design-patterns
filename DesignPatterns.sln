@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerChain", "BrokerChain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command", "Command\Command.csproj", "{F341D598-BC4D-4B30-9202-586D2E6AE4EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interpreter", "Interpreter\Interpreter.csproj", "{D904810A-EA95-412A-88B7-EDF15E773E93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{F341D598-BC4D-4B30-9202-586D2E6AE4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F341D598-BC4D-4B30-9202-586D2E6AE4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F341D598-BC4D-4B30-9202-586D2E6AE4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D904810A-EA95-412A-88B7-EDF15E773E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D904810A-EA95-412A-88B7-EDF15E773E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D904810A-EA95-412A-88B7-EDF15E773E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D904810A-EA95-412A-88B7-EDF15E773E93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
