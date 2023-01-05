@@ -14,6 +14,7 @@ namespace Command
     {
         void Call();
         void Undo();
+        bool Succeeded { get; set; }
     }
 
     public class BankAccountCommand : ICommand
@@ -21,7 +22,6 @@ namespace Command
         private readonly BankAccount bankAccount;
         private Action action;
         private int amount;
-        private bool succeeded;
 
         public BankAccountCommand(BankAccount bankAccount, Action action, int amount)
         {
@@ -30,16 +30,18 @@ namespace Command
             this.amount = amount;
         }
 
+        public bool Succeeded { get; set; }
+
         public void Call()
         {
             switch (action)
             {
                 case Action.Deposit:
                     bankAccount.Deposit(amount);
-                    succeeded = true;
+                    Succeeded = true;
                     break;
                 case Action.Withdraw:
-                    succeeded = bankAccount.Withdraw(amount);
+                    Succeeded = bankAccount.Withdraw(amount);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(action));
@@ -59,6 +61,62 @@ namespace Command
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(action));
+            }
+        }
+    }
+
+    public class CompositeBankAccountCommand : List<BankAccountCommand>, ICommand
+    {
+        public virtual void Call()
+        {
+            ForEach(cmd => cmd.Call());
+        }
+
+        public virtual void Undo()
+        {
+            foreach (ICommand command in ((IEnumerable<BankAccountCommand>)this).Reverse())
+            {
+                if (command.Succeeded) command.Call();
+            }
+        }
+
+        public virtual bool Succeeded
+        {
+            get { return this.All(cmd => cmd.Succeeded); }
+            set 
+            {
+                foreach (var cmd in this)
+                    cmd.Succeeded = value;
+            }
+        }
+    }
+
+    public class MoneyTransferCommand : CompositeBankAccountCommand
+    {
+        public MoneyTransferCommand(BankAccount from, BankAccount to, int amount)
+        {
+            AddRange(new[]
+            {
+                new BankAccountCommand(from, Action.Withdraw, amount),
+                new BankAccountCommand(to, Action.Deposit, amount)
+            });
+        }
+
+        public override void Call()
+        {
+            BankAccountCommand last = null;
+            foreach (var cmd in this)
+            {
+                if (last == null || last.Succeeded)
+                {
+                    cmd.Call();
+                    last = cmd;
+                }
+                else
+                {
+                    cmd.Undo();
+                    break;
+                }
             }
         }
     }
