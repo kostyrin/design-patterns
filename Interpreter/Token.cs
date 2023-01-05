@@ -53,7 +53,7 @@ namespace Interpreter
                             if (char.IsDigit(input[j]))
                             {
                                 sb.Append(input[j]);
-                                i++;
+                                ++i;
                             }
                             else
                             {
