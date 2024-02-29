@@ -39,9 +39,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interpreter", "Interpreter\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator", "Mediator\Mediator.csproj", "{74BF84A2-95B7-4A1C-8B23-E2488216B258}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverBasedOnEvent", "ObserverBasedOnEvent\ObserverBasedOnEvent.csproj", "{4B8D7186-97F8-4D72-8962-E5144F9A0AB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverBasedOnEvent", "ObserverBasedOnEvent\ObserverBasedOnEvent.csproj", "{4B8D7186-97F8-4D72-8962-E5144F9A0AB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverViaSpecialEvent", "ObserverViaSpecialEvent\ObserverViaSpecialEvent.csproj", "{9217C08B-7862-4D17-B4CE-5E9F237277F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverViaSpecialEvent", "ObserverViaSpecialEvent\ObserverViaSpecialEvent.csproj", "{9217C08B-7862-4D17-B4CE-5E9F237277F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservableCollections", "ObservableCollections\ObservableCollections.csproj", "{31AE7C7E-B47B-4E05-B516-A41F331C47A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{9217C08B-7862-4D17-B4CE-5E9F237277F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9217C08B-7862-4D17-B4CE-5E9F237277F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9217C08B-7862-4D17-B4CE-5E9F237277F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AE7C7E-B47B-4E05-B516-A41F331C47A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AE7C7E-B47B-4E05-B516-A41F331C47A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AE7C7E-B47B-4E05-B516-A41F331C47A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AE7C7E-B47B-4E05-B516-A41F331C47A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
